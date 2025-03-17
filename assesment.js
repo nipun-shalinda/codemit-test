@@ -4,7 +4,7 @@ function fibonachi(n){
 
     for(let i=0; i++; i<= n){
 
-        for(let j = i; j++; j<= n){
+        for(let j = i+1; j++; j<= n){
             fibonacciNum = i+j
         }
     }
@@ -44,5 +44,4 @@ function gcd(a,b) {
     }
 }
 
-// console.log(fibonachi(5));
-console.log(gcd(4,2));
+console.log(fibonachi(5));
