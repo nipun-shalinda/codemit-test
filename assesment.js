@@ -13,35 +13,13 @@ function fibonachi(n){
 }
 
 
-function gcd(a,b) {
-    if(a < b){
-        let remainder =  b / a
-
-        if( remainder > 0 ){
-            
-            for (let i= remainder; i / a; i < 0 ){
-                remainder = i
-            }
-
-            return remainder
-        }else {
-            return a
-        }
-    
-    }else {
-        let remainder =  a / b
-
-        if( remainder > 0 ){
-            
-            for (let i= remainder; i / b; i < 0 ){
-                remainder = i
-            }
-
-            return remainder
-        }else {
-            return b
-        }
+function gcd(a, b) {
+    while (b !== 0) {
+        let remainder = a % b;
+        a = b;
+        b = remainder;
     }
+    return a;
 }
 
 console.log(fibonachi(5));
